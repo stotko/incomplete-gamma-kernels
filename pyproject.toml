@@ -1,0 +1,67 @@
+[project]
+name = "incomplete-gamma-kernels"
+version = "0.1.0"
+authors = [{ name = "Patrick Stotko", email = "stotko@cs.uni-bonn.de" }]
+description = ""
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    # Library
+    "torch",
+    "numpy",
+    "scipy",
+    "charonload",
+
+    # Examples
+    "cmasher",
+    "matplotlib",
+    "polyscope",
+    "trimesh",
+    "tqdm",
+]
+
+
+[project.optional-dependencies]
+dev = [
+    # Packaging
+    "build",
+
+    # Formatting
+    "black~=24.0",
+    "isort",
+    "docformatter",
+    "clang-format~=14.0",
+
+    # Linting
+    "codespell",
+
+    # Tests
+    "pytest",
+
+    # Other
+    "nox",
+]
+
+
+[build-system]
+requires = ["setuptools>=64.0"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.black]
+line-length = 120
+
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+py_version = 38
+
+
+[tool.docformatter]
+wrap-summaries = 120
+wrap-descriptions = 120
+pre-summary-newline = true
+tab-width = 4
+black = true
+syntax = "numpy"

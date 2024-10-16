@@ -1,0 +1,13 @@
+__pycache__
+.*_cache
+*.py[cod]
+build
+src/incomplete_gamma_kernels.egg-info
+typings
+.coverage*
+.nox
+imgui.ini
+.polyscope.ini
+data/cache
+
+.vscode
